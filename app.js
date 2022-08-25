@@ -1223,3 +1223,20 @@ console.log(num2)//50
  }
 console.log(person2.username) //jyoti
 
+
+
+//access object property without using . 
+
+const object ={name:"jyoti",nationality:"indian",city:"varansi"}
+const {nationality}=object;
+console.log(nationality) //indian*/
+
+
+const arr=[2,8,6,9,7];
+function myfunc(a,b){
+    return b-a;
+}
+
+const result=arr.sort(myfunc);;
+console.log(result)
+
