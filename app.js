@@ -1240,3 +1240,379 @@ function myfunc(a,b){
 const result=arr.sort(myfunc);;
 console.log(result)
 
+//how to find os name
+console.log(navigator.platform)
+
+//event delegation :- we provide event listener to the parent and access child with the help of that event
+//otherwise takes lot of memory with support to adding extra elemnt .
+
+
+const listEl=document.querySelector("#list")
+listEl.addEventListener('click' ,(event)=>{
+    console.log(event)
+    if(event.target.tagName==='LI'){
+        //window.location.href+="#"+event.target.id
+        console.log("list is clicked")
+    }
+
+})
+
+
+//flatten then array
+
+const arr=[
+    [1,2],
+    [3,4,5,6],
+   // [8,9,3,4,56]
+    [8,9,[3,4],56]//[1, 2, 3, 4, 5, 6, 8, 9, Array(2), 56]//nested inside other
+
+
+
+]
+
+let flatten = [].concat(...arr)
+console.log(flatten)//[1, 2, 3, 4, 5, 6, 8,9, 3,4, 56]
+
+console.log(arr.flat(2))//[1, 2, 3, 4, 5, 6, 8, 9, 3, 4, 56]
+*/
+
+//console.log(typeof NaN) //number
+
+
+//creating object by various way
+//1
+// var object = new Object();
+// object.name="jyoti";
+// object.age=21;
+
+// console.log(object)
+
+//2
+
+// class person{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age
+//     }
+// }
+
+// var obj=new person("jyot",23)
+
+
+//classes in es6
+
+// class bike{
+//     constructor(modal ,color){
+//         this.modal=modal;
+//         this.color=color;
+//     }
+
+//     getdetails(){
+//         return (`${this.modal}  has ${this.color}`)
+//     }
+// }
+
+// bike.prototype.number =21584;
+// bike.prototype.color="red"
+// console.log(bike("nano","blue").getdetails())
+
+
+// class bike{
+//     constructor(modal,color){
+//         this.modal=modal;
+//         this.color=color;
+
+//     }
+
+//     getdetails(){
+//         return (`${this.modal} and ${this.color} ${this.number}`)
+//     }
+// }
+// bike.prototype.number =21584;
+// let bikeStyle = new bike ("nano","red")
+// console.log(bikeStyle.getdetails())
+
+
+// function myfunc(){
+//    clearTimeout( setTimeout(()=>{
+//         console.log("hey whats up")
+//     },2000))
+// }
+
+// function yourfunc(){
+//     console.log("whaat are yoou doing dude")
+// }
+
+// myfunc();
+// yourfunc();
+
+// // var a=eval("6+7*2");
+// // console.log(a)
+// //  const b = parseInt("hekko")
+// //  console.log(typeof NaN)
+
+// //  console.log(navigator.platform);
+
+
+// const parent =document.querySelector("#list")
+// parent.addEventListener("click",(e)=>{
+//     if(e.target="li"){
+//         e.target.style.backgroundColor ="red"
+//         console.log("event occure")
+//     }
+//     else{
+//         e.target.style.backgroundColor ="green"
+//     }
+   
+// })
+
+// let childEl = document.createElement("lo")
+// childEl.textContent ="list8"
+// parent.appendChild(childEl)
+
+
+// //json is the text-based data-format that is use to store and transfer the data .
+
+
+
+
+// let box = document.getElementById("box");
+// let id = setTimeout(anim,3000)
+
+// function anim(){
+   
+//     box.style.width = "500px";
+// }
+
+
+// function clickHandler(){
+//     clearTimeout(id)
+
+// }
+
+// let a=0;
+// let box = document.getElementById("box");
+// let id = setInterval(anim,100)
+
+// function anim(){
+
+//    a=a+10;
+//     if(a == 200){
+//         clearInterval(id);
+//     }
+//     else{
+//         box.style.marginLeft = a+"px";
+//     }
+   
+    
+// }
+
+// var mainString = "hello",
+//   subString = "ell";
+// console.log(mainString.indexOf(subString)!==-1);
+// console.log("location.href", window.location.href)  //current url of the window
+
+
+// var obj ={
+//     name:"jyoti",
+//     age:23
+// }
+// console.log("age" in obj)
+// console.log(obj.hasOwnProperty("age"))
+
+
+// var object = {
+//     k1: "value1",
+//     k2: "value2",
+//     k3: "value3",
+//   };
+  
+//   for (var key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       console.log(key + " -> " + object[key]); // k1 -> value1 ...
+//     }
+//   }
+
+
+//   var a ="jyoti"
+
+// console.log(a.charAt(0).toUpperCase()+ a.slice(1))//Jyoti
+
+// var date = new Date();
+// // var mon = date.getFullYear()
+// var anotherTimeZone = date.toLocaleString('en-GB',{timeZone:"UTC"})
+// console.log(anotherTimeZone)
+
+
+// function myfunc(){
+//     var ans =0;
+//    for(let i =0;i<arguments.length;i++){
+//     ans+=arguments[i]
+
+//    }
+// return ans
+// }
+// console.log(myfunc(2,3,5))
+// var text=0;
+// for (i = 0; i < 10; i++) {
+//     if (i === 5) {
+//       break;
+//     }
+//     text += "Number: " + i + "<br>";
+  
+//   }
+
+//   console.log(text)
+
+
+//generator function;
+
+// function *myfunc(a){
+//     yield a;
+//     yield a+10
+
+   
+// }
+
+// let gen=myfunc(1)
+// console.log(gen.next().value)//1
+// console.log(gen.next().value)//11
+
+
+//map,filter,reduce
+//call,apply,bind
+
+// const user1={
+//     name:"jyoti",
+//    city:"varanasi",
+//     getdetail:function(profile,year){
+//         return (`${this.name} and ${this.city} ${profile} ${year}`)
+
+//     }
+// }
+// const user2 ={
+//     name:"varsha",
+//     city:"mumbai"
+// }
+// console.log(user1.getdetail.call(user2,"developer",2022))
+// console.log(user1.getdetail.apply(user2 ,["develeoper",2021]))
+// const bindEl=user1.getdetail.bind(user2)
+// console.log(bindEl())
+
+const emails=["jyit@gmail.com","hgdhf@gmail.com","fjhfj@gmail.com"]
+
+function delay(useremail){
+    return new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve(`email is send to ${useremail}`)
+            },1000)
+        })
+}
+ function student(){
+  for(useremail of emails){
+    const myfunc = await delay(useremail)
+    console.log(myfunc)
+
+  }
+   console.log("email is send")
+  
+}
+
+student();
+
+
+// const array =[1,2,3,4];
+// const res=array.reduce((a,b)=>{
+//     return a+b;
+// },0)
+
+// console.log
+
+
+//closure => the inner access the variable and parameter of the outer function even after the outer function has returned
+// function retirement(retirementAge){
+//     var a = "this  is the age left until retirement";
+//     return function(yearOfBirth){
+//         var age = 2022-yearOfBirth;
+//         console.log((retirementAge-age) + a)
+//     }
+// }
+// var myfunc = retirement(66)
+// myfunc(1990)
+
+
+
+//every function in javascript has property prototype that refers to an object  as proptotype is  an object so you can assign property ,method in it
+//
+
+ function manager(){
+    this.name="jyoti";
+    this.city="varanasi";
+ }
+
+ function employee(){
+    this.profile = "developer"
+ }
+
+ var emp = new employee();
+ manager.prototype=emp;
+
+ var man = new manager();
+ manager.prototype.nationality="india"
+ console.log(man.nationality)
+
+
+ function myfunc (){};
+ myfunc.prototype.name="jyoti";
+ var fun = new myfunc()
+
+ console.log(fun.name)
+
+
+ function retirement(age){
+    var a ="this is the age until retirement"
+    return function(birthyear){
+        var b = 2022 - birthyear;
+        
+        console.log(age-b + a)
+    }
+ }
+
+ var myfunc =retirement(66);
+ myfunc(1990)
+
+
+
+ const posts =[
+    {title:"post1" ,body:"this is post1"},
+    {title:"post2" ,body:"this is post2"},
+    {title:"post3" ,body:"this is post3"}
+ ];
+
+ function mypost(){
+    setTimeout(()=>{
+        posts.forEach((userPost)=>{
+            console.log(`this is ${userPost.title}`)
+        })
+    },1000)
+ }
+
+
+
+ function newPost(userNewPost){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            posts.push(userNewPost)
+            resolve();
+    
+        },2000)
+     
+
+    })
+}
+  
+ newPost({title:"post4" ,body:"this is post4"}).then(()=>{
+    mypost();
+
+ })
+
