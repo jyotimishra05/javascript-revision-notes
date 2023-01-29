@@ -1616,3 +1616,391 @@ student();
 
  })
 
+
+
+
+//curry function => when the function, instead of taking all the argumnets at same time takes the first one,
+// that return new function which take secont one then return another function that takes third one and return new function
+
+
+// function sum(a){
+//     return (b)=>{
+//         return (c)=>{
+//             return a+b+c;
+//         }
+//     }
+// }
+// let data=sum(2)
+// console.log(data);
+
+ //first class function
+
+//  function square(num){
+//     return num*num;
+// }
+// const myfunc=function(fn){
+//     console.log(fn(6));
+// }
+// myfunc(square);
+
+
+//var doestnot have a block scope //let has a block scope
+// for(let i=0;i<5;i++){
+//     setTimeout(()=>{
+//         console.log(i);
+//     },i*1000)
+// } //0 1 2 3 4 
+// for(var i=0;i<5;i++){
+//     setTimeout(()=>{
+//         console.log(i);
+//     },i*1000)
+// } //5 5 5 5 5 
+
+
+//argument cannot be define inside the arrow function
+
+
+// var myfunction=()=>{
+//     console.log(arguments)
+// }
+// myfunction(1,2,3,4) //error argument cannot define in  arrow function
+
+
+// function myfunction(){
+//     console.log(arguments)
+// }
+// myfunction(1,2,3,4)  array of 1,2,3,4
+
+
+//const and let is not hoisted as var but they are hoisted in the temporal dead zone  //variable are in the scope but they have not been declared yet
+
+
+
+//infinite curry=>   add(2)(4)(6)...()
+
+// function sum(a){
+//     return (b)=>{
+//         if(b) return sum(a+b)
+//         return a;
+//     }
+// }
+// sum(5)(5)(3)(6)();   //19
+
+
+//partial application => in curry no of argument we have we return that much function but in partial application no of agrumnet is not eual no of funtion it return 
+
+// function add(a){
+//     return (b,c)=>{
+//         return a+b+c;
+//     }
+// }
+
+// add(2)(3,4)
+
+//debouncing => like in flipkart search box whenever we are typing letters (on every keypress event)it is not showing the result for every letters bcs this
+//will makeunnecessary api call in the backend which will put alot of pressure on the server for that we are using debouncing u see when we stop for view millisec then only it update the serach result
+//it limit the execution of the function call and wait for a certain amount of time to run it again   or unnecessary fn call avoid which slow down the performance
+
+
+//let there is search box having delay of 500ms and we typing one letter after other and these has the gap of let say 100ms so as soon as we are typing
+//no api is call but let say we are typing after 600ms which is more then 500ms then the api is call  example=> infinite scrolling like in twitter
+// resizing of the window
+
+
+//throtlling =>it will call the api after every 500ms like you are typing samsung and 500ms will expire on n then will will call the api
+//diff bet two fn call is 500ms then api call instead in debouncing if the diff between two key press event is greater then time limit then api is call
+//
+
+
+//shallow copy=>when one object hold the reference of other object but when we clone completely one objr=ect to other that is called deep copy
+// const obj={
+//     name:"jyoti",
+//     age:23
+// }
+// const obj2=obj;  obj2 copy the memory address of obj2        copy memory ki location
+// obj2.name="varsha"
+// console.log(obj)
+
+// const obj={
+//     name:"jyoti",
+//     age:23
+// }
+// const obj2=Object.assign({},obj)
+// obj2.name="varsha"
+// console.log(obj)
+
+
+// const obj={
+//     name:"jyoti",
+//     age:23,
+//     func:()=>{
+//     console.log("hey dude")
+//     }
+// }
+// const obj2={...obj}
+// obj2.name="varsha"
+// console.log(obj)
+
+// but there is the problem with nested object it alse changes
+
+// const obj={
+//     name:"jyoti",
+//     age:23,
+//     info:{
+//         city:"varanasi",
+//         state:"up"
+//     }
+// }
+// const obj2={...obj}
+// obj2.name="varsha"
+// obj2.info.city="kanpur"
+// console.log(obj)      city:kanpur showing to avoid this
+
+// const obj={
+//     name:"jyoti",
+//     age:23,
+//     info:{
+//         city:"varanasi",
+//         state:"up"
+//     }
+// }
+// const obj2=JSON.parse(JSON.stringify(obj))
+// obj2.name="varsha"
+// obj2.info.city="kanpur"
+// console.log(obj)   city:varansi
+
+
+// const str="this is javascript you have to find max character"
+// const reverse=str.split(" ").join("")
+// const freqcount={}
+
+// for(let char of reverse){
+//     freqcount[char]=freqcount[char]+1||1
+// }
+// let maxcount=0;
+// let getchar=null;
+// for(key in freqcount){
+//     if(freqcount[key]>maxcount){
+//         maxcount=freqcount[key]
+//         getchar=key;
+//     }
+// }
+// console.log(maxcount +" "  + getchar)
+
+
+
+// const str="this is javascript you have to find max character"
+// const reverse=str.split(" ").map((c)=>c.split("").reverse().join("")).join(" ")
+// console.log(reverse)
+//siht si tpircsavaj uoy evah ot dnif xam retcarahc
+
+
+// why js is dynamic language
+// js is dynamic means data type of the variable can change durin runtime
+// var x=10;
+// typeof(x) //number
+// x="text"
+// typeof(x)//string  js can change its data type by looking ay the variable during runtime
+
+//datatypes in js=> primitive : string,number,null,undefined,boolean,symbol,big and objects
+
+//null indicates an absence of data typeof(null)=>object
+
+//hoisting is the mechanism by which variable and function are move to the top of the scope before code execution
+
+
+//implementing caching/memoization funtion in js
+
+// const memoizationfun=(fn)=>{
+//     let cacheres={}
+//     return function(...args){
+//         let n=args[0]
+//         console.log(n)
+//         if(n in cacheres){
+//             return cacheres[n]
+//         }
+//         else{
+//             let result=fn(n)
+//             cacheres[n]=result
+//             return result
+//         }
+        
+//     }
+// }
+// let sum=0;
+// const calsum=(n)=>{
+//     for(let i=0;i<=n;i++){
+//         sum+=i
+//     }
+//     return sum
+// }
+// console.time()
+// const resultmemo=memoizationfun(calsum)
+// console.log(resultmemo(8))
+// console.timeEnd()
+
+
+// const cal={
+//     totalresult:0,
+//    add:function(n){
+//        this.totalresult+=n;
+//        return this
+    
+//    },
+//    mul:function(n){
+//        this.totalresult*=n
+//        return this
+//    },
+   
+//    sub:function(n){
+//        this.totalresult-=n
+//        return this
+//    }
+// }
+
+// const totalresults=cal.add(2).mul(10).sub(1);
+// console.log(totalresults.totalresult) //19
+
+// let user={
+//     name:"jyoti",
+//     place:"varanasi",
+//     userinfo:{
+//         username:"riya",
+//         userdetail:function(){
+//         console.log(this.name + " "+ this.username)
+//     }
+//              }
+// }
+// user.userinfo.userdetail() //undefines riya   this  will point to the current object only
+
+
+
+// let user={
+//     name:"jyoti",
+//     place:"varanasi",
+//     userinfo:function(){
+     
+//        const arrow=()=>{
+//         console.log(this.name)
+//     }
+//         arrow()
+        
+// }
+// }
+// user.userinfo() //jyoti
+
+
+var lengths=44;
+
+function callbacks(){
+    console.log(this.lengths)
+    
+}
+const object={
+    lengths:7,
+    func:function(fn){
+        fn()
+    }
+}
+object.func(callbacks)//44
+
+//global variable are the variables which are accessisable throughout the web page ot document
+//issue with this is it can make the application hard to debug 
+//when you are assign the variable without var keyword then it become global
+
+// var x=10;
+// function global(){
+//     y=10;-----------------|
+//     console.log(y)        |
+// }                         | 
+// global()                  | 
+// console.log(y) //10 10 <--|   once the var bcm global it is hard to bedug and make the application buggy
+   
+
+//use strict strictly check if the variable is declared using var keyword or let keyword
+
+"use strict"
+var x=10;
+function global(){
+    y=10;
+    console.log(y)
+}
+global()
+console.log(y) //throws error that y is not define  
+
+
+//we cann use iife and closure to avoid the problem of global variable
+
+//everything in localstorage is in the form of string so we need to convert it into object using JSON.parse()
+
+
+//module pattern=best design pattern
+//module pattern =iife(name collison)+closure(encapsulation) means we can make if public i.e to which we want to show
+//and what to hidden can be control by this
+
+const person={
+    name:"jyoti"
+}
+const info={
+    name:"riya",
+    age:78,
+    __proto__:person
+}
+console.log(info.name) //riya
+
+// function details(){
+//     this.name="jyoti"
+//     this.age=78
+// }
+// var infos=new details()
+// details.prototype.something=function(){
+//     console.log(this.name)
+// }
+// infos.something()
+
+
+function manager(){
+    this.name="jyoti";
+    this.city="varanasi";
+ }
+
+ 
+
+manager.prototype.es=function(){
+    console.log("name")
+ }
+
+var e=new manager()
+e.es()
+//pollyfill=>piece of js code which provide modern funtionality to the olderbrowser for ex=>silver light plugin pollyfill
+
+//pure funtion are the funtion which returns the value determine by its argument without any sideeffect(without modifying any data outside it scope)
+var x=10;
+function sum(){
+    x++;
+    console.log(x)
+}
+sum()
+sum()
+
+//event propagation determine in which order element receive the event focu and blur event donot bubble
+
+//api is used so that the access of the actual system is not given to someone else we made an api whoever wants some data of our system we will expose
+//those data to them ,give them end points with proper api key and with the help of api we will monito who accessed how much data from out system.
+
+//in documentation of api it was mention there that how many  times we can hit the api 
+
+//marquee => this tag is use when we want to make a scrollable text and image within the web page either from left to right or vice-versa
+
+
+//when window is loaded it will listen this event
+
+addEventListener("hello",function(){
+    alert("event is dispaatch")
+})
+
+let event = new Event("hello",{bubbles:true})
+document.dispatchEvent(event)
+
+
+//collection is the group of api request
