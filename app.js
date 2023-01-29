@@ -1700,7 +1700,22 @@ student();
 //debouncing => like in flipkart search box whenever we are typing letters (on every keypress event)it is not showing the result for every letters bcs this
 //will makeunnecessary api call in the backend which will put alot of pressure on the server for that we are using debouncing u see when we stop for view millisec then only it update the serach result
 //it limit the execution of the function call and wait for a certain amount of time to run it again   or unnecessary fn call avoid which slow down the performance
+const debounce=(fn,delay)=>{
+        var prevcleartimeout
+        return function(...args){
+            if(prevcleartimeout){
+                clearTimeout(prevcleartimeout)
 
+            }
+            prevcleartimeout=setTimeout(()=>{
+                fn(...args)
+            },2000)
+        }
+    };
+
+    btn.addEventListener("click",debounce(e=>{
+        console.log("click")
+    },2000))
 
 //let there is search box having delay of 500ms and we typing one letter after other and these has the gap of let say 100ms so as soon as we are typing
 //no api is call but let say we are typing after 600ms which is more then 500ms then the api is call  example=> infinite scrolling like in twitter
@@ -1710,7 +1725,21 @@ student();
 //throtlling =>it will call the api after every 500ms like you are typing samsung and 500ms will expire on n then will will call the api
 //diff bet two fn call is 500ms then api call instead in debouncing if the diff between two key press event is greater then time limit then api is call
 //
-
+const throttle=(fn,delay)=>{
+    let last=0;
+    return function(...args){
+        let now=new Date().getTime();
+        console.log(now-last)
+        if(now-last<delay){
+            return;
+        }
+        last=now
+        return fn(...args)
+    }
+}
+    btn.addEventListener("click",throttle(()=>{
+        console.log("clicked")
+    },2000))
 
 //shallow copy=>when one object hold the reference of other object but when we clone completely one objr=ect to other that is called deep copy
 // const obj={
