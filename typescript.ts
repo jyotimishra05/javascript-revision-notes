@@ -92,3 +92,85 @@ let tdata :[number,boolean,string]
 tdata=[1234,true,""] //in the same order as mention
 
 tdata=[1234,"",false] //error order not match
+
+//enum
+
+const enum data{
+    name="jyoti",
+    city="varanasi"
+}
+const detail = data.name
+
+//interface
+
+interface user{
+    email:string,
+    readonly dbID : number,
+    // startTrail:()=>string,
+    startTrail():string,
+    getCoupon(coupon:string):number
+    
+}
+//re-open the interface inorder add some additional properties
+interface user{
+    googleId:number
+}
+const jyoti:user={email:"jyoti",dbID:3455,startTrail:()=>{
+    return "trail started"
+},
+getCoupon:(couponName:"jyoticoupon123")=>{
+    return 1234
+},
+googleId:3746746
+
+}
+//classes
+
+class user{
+    email:string
+    name:string 
+    // state:string //error
+    state:string=""
+
+    constructor(email:string,name:string){
+        this.email=email
+        this.name=name
+    }
+}
+const jyotiDetails = new user("jyoti123@gmail.com","jyoti")
+jyotiDetails.state="varanasi"
+
+
+//interface 
+interface TakePhoto{
+    cameraMode:string,
+    filter:string
+}
+interface story{
+    createStory():void
+}
+class instagram implements TakePhoto,story{
+    constructor( public cameraMode:string , public filter:string)
+    {}
+    createStory():void{
+        console.log("story created!")
+    }
+}
+
+
+//abstract 
+
+abstract class detail {
+    constructor(
+        public email :string,
+        public name : string
+    ){}
+}
+
+// let user = new detail ("jyoti@.gmail.com","jyoti")//error can't create new object from abstract class
+
+class userDetails extends detail{
+
+}
+
+let user = new userDetails("jyoti@.gmail.com","jyoti")
