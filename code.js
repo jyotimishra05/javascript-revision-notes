@@ -1,7 +1,7 @@
 
 Code 1: Remove Duplicate characters from String
 function removeDuplicateCharacters() {
-  var string='priya riya supriya'
+  var string='jyoti riya sujyoti'
   let result= string.split('').filter((item, index, arr)=> {
                return arr.indexOf(item) == index;
                }).join('');
@@ -42,7 +42,7 @@ var reverseWords = function(s) {
     }
     return res + word;
 };
-console.log(reverseWords("priya bagde"))
+console.log(reverseWords("jyoti bagde"))
 ================================================================================================================================================================================
 Code 5:String reverse with reversing of individual words
 function withoutReverse(){
@@ -139,7 +139,7 @@ checkPalindrome()
 Code 13: To find longest word from a string using (for of) /*for(var i=0; i>=num; i++) means iterate by indexing*/  /*for (var word of words) means iterate by an elements not 
 by indexing*/
 function longestWord(){
-   let string = "supriya is a masooooom good girl"
+   let string = "sujyoti is a masooooom good girl"
    var words= string.split(' ')
    var longest=" "
    for(var word of words){
@@ -154,7 +154,7 @@ function longestWord(){
 longestWord()
 ---------------------------
 function longestWord(){
-   let string = "supriya is a hahahahaha good girl"
+   let string = "sujyoti is a hahahahaha good girl"
    var arr= string.split(' ')
    var longest=" "
    for(var i=0; i<arr.length; i++){
@@ -170,7 +170,7 @@ console.log(longestWord())
 ================================================================================================================================================================================
 Code 14: To find longest word from a string using functions
 function findLongestWord() {
-  var str = "Priya is a goog girl and having hardworking skill"
+  var str = "jyoti is a goog girl and having hardworking skill"
   var longestWord = str.split(' ').sort((a, b) => {return b.length - a.length }); //in desc order //from greater to smallest word
      console.log(longestWord[0]);
      console.log(longestWord[0].length); 
@@ -179,7 +179,7 @@ findLongestWord();
 ================================================================================================================================================================================
 Code 15: To find longest word from a string using custom code
 function longest() {
-  var str ="Priya is a good girl and having hardworking skills"
+  var str ="jyoti is a good girl and having hardworking skills"
   var words = str.split(' ');
   var longest = ''; 
   for (var i = 0; i < words.length; i++) {
@@ -232,7 +232,7 @@ console.log(longestCommonString())
 Code 17: To find vowels and its count in a given string
 function vowelCounts(){
   vowels=["a","i","e","o","u"]
-  var str ="priya"
+  var str ="jyoti"
   count=0;
   for(var letter of str.toLowerCase())
   {
@@ -259,7 +259,7 @@ function characterOccurance(str,letter){
   console.log(count)
   return count
 }
-characterOccurance("priyapri", "p")
+characterOccurance("jyotipri", "p")
 ================================================================================================================================================================================
 Code 19: To find a first pair whose sum is zero
 function getSumPairZero(array)
@@ -523,13 +523,13 @@ Code 37: To check ending of the string with given character/s using inbuild func
 function confirmEnding(str,target){
    return str.endsWith(target) //true
 }
-console.log(confirmEnding("priya","a"))
+console.log(confirmEnding("jyoti","a"))
 ===============================================================================================================================================================================
 Code 38: To check ending of the string with given character/s using custom
 function confirmEnding(str,target){
    return str.substr(-target.length)===target
 }
-console.log(confirmEnding("priya","a"))
+console.log(confirmEnding("jyoti","a"))
 ===============================================================================================================================================================================
 Code 39: To find the largest elements fro the 2 dimensional array 
 function largestFromArray(arr){
@@ -570,7 +570,7 @@ function repeatStrinNumTimes(str, num){
 if (num<1) return ""
 return str.repeat(num)
 }
-console.log(repeatStrinNumTimes("priya",3))
+console.log(repeatStrinNumTimes("jyoti",3))
 ================================================================================================================================================================================
 Code 42: Print string n times in custom way
 function repeatStrinNumTimes(str, num){
@@ -582,7 +582,7 @@ for(var i=0; i<num;i++)
 }
 return final
 }
-console.log(repeatStrinNumTimes("priya",3))
+console.log(repeatStrinNumTimes("jyoti",3))
 ================================================================================================================================================================================
 Code 43:Print string n times in custom way
 function repeatStrinNumTimes(str, num){
@@ -590,15 +590,15 @@ if(num<0) return ""
 if(num===1) return str
 return str+ repeatStrinNumTimes(str, num-1)
 }
-console.log(repeatStrinNumTimes("priya",3))
+console.log(repeatStrinNumTimes("jyoti",3))
 ================================================================================================================================================================================
 Code 44: Truncate the string
 function truncateString(str, num){
 if(num<=3) return str.slice(0,num)
 return str.slice(0,num-3)+"..." //retuen only 4 digits thats why subtracted from 3
 }
-console.log(truncateString("priyabagde",2)) //pr
-console.log(truncateString("priyabagde",4)) //p... //retuen only 4 digits
+console.log(truncateString("jyotibagde",2)) //pr
+console.log(truncateString("jyotibagde",4)) //p... //retuen only 4 digits
 ================================================================================================================================================================================
 Code 45: Converting one dimensional array into n dimensional array using slice
 function chunkArrayInGroup(arr, size){
@@ -631,14 +631,14 @@ function removeFalseValue(arr){
  }
  return trueth
 }
-console.log(removeFalseValue(["priya", 0 ,"", false, null,undefined, "ate", Nan ,9 ])) //["priya","ate",9]
+console.log(removeFalseValue(["jyoti", 0 ,"", false, null,undefined, "ate", Nan ,9 ])) //["jyoti","ate",9]
 ================================================================================================================================================================================
 Code 49:  To find only truthy values using filter
 function removeFalseValue(arr){
   return arr.filter((item)=>{
                 return item})
 }
-console.log(removeFalseValue(["priya", 0 ,"", false, null,undefined, "ate", 9 ]))
+console.log(removeFalseValue(["jyoti", 0 ,"", false, null,undefined, "ate", 9 ]))
 ================================================================================================================================================================================
 Code 50: Checking all letters of second words should present in first word, in the same order using include function
 function characterPresent(arr){
@@ -981,11 +981,11 @@ function checkValueExist(arr, item){
   }
   return status
 }
-console.log(checkValueExist(['priya', 'riya', 'supriya'], 'priya'))
+console.log(checkValueExist(['jyoti', 'riya', 'sujyoti'], 'jyoti'))
 ================================================================================================================================================================================
 code 69: To check wheather property exist or not in object
 let student ={
-  name : "priya",
+  name : "jyoti",
   age: 20
 }
 console.log('name' in student)
@@ -994,7 +994,7 @@ console.log(student.hasOwnProperty('name'))
 ================================================================================================================================================================================
 code 70: To dlete the property of an object
 let student ={
-  name : "priya",
+  name : "jyoti",
   age: 20,
   city: "pune"
 }
@@ -1097,13 +1097,13 @@ function alternateText(str){
       }
   return char.join('')
 }
-console.log(alternateText("Priya Bagde")) //"PrIyA BaGdE"
+console.log(alternateText("jyoti Bagde")) //"jyoti BaGdE"
 OR
-let alt = "Priya Bagde"
+let alt = "jyoti Bagde"
 alt = alt.split("")
   .map((letter,index)=>(index%2)==0 ? letter.toUpperCase(): letter.toLowerCase())
   .join("")
-console.log(alt) //"PrIyA BaGdE"
+console.log(alt) //"jyoti BaGdE"
 ================================================================================================================================================================================
 code 79:  To find the negative values in an array or 2D Array
 function countNegative(arr){
@@ -1678,21 +1678,21 @@ console.log(commonElements(A, B)); //[4,5]
 JAVASCRIPTS Inbuilt Functions:
 
 Code : JAVASCRIPT substr concept
-var sentence ="I'm priya and having sounds kowledge."
+var sentence ="I'm jyoti and having sounds kowledge."
 console.log(sentence.substr(0,5)) //(startigIndex, NoOfCharatersWants-->take 1 less)//I'm p
 console.log(sentence.substr(2,5)) //m pri
-console.log(sentence.substr(2))   //m priya and having sounds kowledge.
-console.log(sentence.substr(4))   //priya and having sounds kowledge.
+console.log(sentence.substr(2))   //m jyoti and having sounds kowledge.
+console.log(sentence.substr(4))   //jyoti and having sounds kowledge.
 console.log(sentence.substr(-4))  //Negative goes From ending of the string //dge.
 console.log(sentence.substr(-5)) //edge.
 
 ================================================================================================================================================================================
 Code : JAVASCRIPT slice concept i.e, it doesn't change the original array
-var sentence ="I'm priya and having sounds kowledge."
+var sentence ="I'm jyoti and having sounds kowledge."
 console.log(sentence.slice(0,5)) //"I'm p"
 console.log(sentence.slice(2,5)) //"m p"
-console.log(sentence.slice(2))   //"m priya and having sounds kowledge."
-console.log(sentence.slice(4))   //"priya and having sounds kowledge."
+console.log(sentence.slice(2))   //"m jyoti and having sounds kowledge."
+console.log(sentence.slice(4))   //"jyoti and having sounds kowledge."
 console.log(sentence.slice(-4))  //"dge."
 console.log(sentence.slice(-5))  //"edge."
 
@@ -1710,9 +1710,9 @@ Code: JAVASCRIPT indexOf concept
 console.log(greeting.indexOf("e")) //1
 ================================================================================================================================================================================
 Code: JAVASCRIPT split concept
-var name ="Priya Bagde"
+var name ="jyoti Bagde"
 console.log(name.split("")) //["P","r","i","y","a"," ","B","a","g","d","e"]
-console.log(name.split(" ")) //["Priya","Bagde"]
+console.log(name.split(" ")) //["jyoti","Bagde"]
 ================================================================================================================================================================================
 Code: JAVASCRIPT join concept
 var arr = ['a','b','c','d','e']
@@ -1818,9 +1818,9 @@ var person = function(name){
 }
 person.prototype.age = 21;
 var piya = new person("Piya");
-var priya = new person("Priya");
+var jyoti = new person("jyoti");
 console.log(piya.age) //21
-console.log(priya.age) //21
+console.log(jyoti.age) //21
 
 <B>Purpose/Use of prototype:
 1) to find properties and methods of an object 
@@ -1940,16 +1940,16 @@ const people={
  }
 }
 const person1={
-  firstName: "Priya",
+  firstName: "jyoti",
   lastName:"Bagde"
  } 
-console.log(people.fullName.call(person1)); //Priya Bagde
-console.log(people.fullName.apply(person1)); //Priya Bagde
+console.log(people.fullName.call(person1)); //jyoti Bagde
+console.log(people.fullName.apply(person1)); //jyoti Bagde
 let bound = people.fullName.bind(person1)
-console.log(bound()) //Priya Bagde
+console.log(bound()) //jyoti Bagde
 
 Example2:
-const obj = {name:"Priya"}
+const obj = {name:"jyoti"}
 let greeting = function(a,b){
   return a+" "+this.name+" "+b;
 }
@@ -2177,7 +2177,7 @@ by browser, so in this case we can provide our own fallback support or own code 
 Example for bind:
 With Bind-
 let name ={
-  first: "Priya",
+  first: "jyoti",
   last: "Bagde"
 }
 let printName = function(){
@@ -2187,7 +2187,7 @@ let printNameFinal= printName.bind(name)
 printNameFinal()
 
 Without Bind-
-let name ={ first: "Priya", last: "Bagde"}
+let name ={ first: "jyoti", last: "Bagde"}
 let printName = function(town, state){ console.log(this.first+" "+this.last+" "+town+" "+state)}
 Function.prototype.mybind= function(...args){ //printName arguments
   let obj = this; //printName
@@ -2289,7 +2289,7 @@ JWT Token:
 ================================================================================================================================================================================
 Polyfill of Bind:
 const name ={
-  firstName: "Priya", 
+  firstName: "jyoti", 
   lastName: "Bagde"
 }
 
@@ -2312,7 +2312,7 @@ printMyName2("India"); //with polyfill of bind
 ================================================================================================================================================================================
 Polyfill of Call:
 const myName = {
-  firstName: "Priya",
+  firstName: "jyoti",
   lastName : "Bagde"  
 }
 
@@ -2336,7 +2336,7 @@ printName.myCall(myName, "MH", "India")
 ================================================================================================================================================================================
 Polyfill of Apply:
 const myName = {
-  firstName: "Priya",
+  firstName: "jyoti",
   lastName : "Bagde"  
 }
 
@@ -2644,14 +2644,14 @@ console.log(addSum(2,3,4,6,7)) //22
 function getNames(name1, name2, name3){
   console.log(name1,name2, name3);
 }
-var names =["priya", "riya", "supriya"]
-getNames(names[0], names[1], names[2]); //"priya" "riya" "supriya"
+var names =["jyoti", "riya", "sujyoti"]
+getNames(names[0], names[1], names[2]); //"jyoti" "riya" "sujyoti"
 getNames(...names) //spread operator here used to spread the individual arguments //best approach because here we are passing all the arguments but we can use some of the arguments inside function without an error. Other approaches will gives an error to pass those arguments which are used in function.
 getNames(names)
 =========================================================================================================================================================================
 Rest Spread in object: 
 var student ={
-  name: "priya",
+  name: "jyoti",
   age : 100,
   hobbies : ["cooking", "dancing"]
 }
@@ -2660,14 +2660,14 @@ var student ={
 //console.log(age) //10
 
 //const {age, ...rest} = student; //using destructuring
-//console.log(age, rest) //100 {"name": "priya", "hobbies":["cooking", "dancing"]}
+//console.log(age, rest) //100 {"name": "jyoti", "hobbies":["cooking", "dancing"]}
 
 const {...rest} = student;
-console.log(rest) //{"name": "priya", "age": 100, "hobbies":["cooking", "dancing"]}
+console.log(rest) //{"name": "jyoti", "age": 100, "hobbies":["cooking", "dancing"]}
 =====================================================================================================================================================================
 //spread operator in object: (Change the value of age)
 var student ={
-  name: "priya",
+  name: "jyoti",
   age : 100,
   hobbies : ["cooking", "dancing"]
 }
@@ -2680,9 +2680,9 @@ console.log(newStudent)
 ====================================================================================================================================================================
 Callback, Promise and Async/await :-
 const data = [ //array of object
-  {name: "priya", role: "software developer"},
+  {name: "jyoti", role: "software developer"},
   {name: "riya", role: "software developer"},
-  {name: "supriya", role: "software developer"}
+  {name: "sujyoti", role: "software developer"}
 ];
 
 function getData(){
@@ -2692,19 +2692,19 @@ function getData(){
     output +=`<li> ${item.name}</li>`
    })    
    document.body.innerHTML = output;
- }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanupriya".
+ }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanujyoti".
 }
 function createData(dataInput){
 setTimeout(()=>{data.push(dataInput)}, 2000) 
 }
-createData({name: "dhanupriya", role: "software developer"})
+createData({name: "dhanujyoti", role: "software developer"})
 getData()
 =====================================================================
 Callback:
 const data = [ //array of object
-  {name: "priya", role: "software developer"},
+  {name: "jyoti", role: "software developer"},
   {name: "riya", role: "software developer"},
-  {name: "supriya", role: "software developer"}
+  {name: "sujyoti", role: "software developer"}
 ];
 
 function getData(){
@@ -2722,13 +2722,13 @@ function createData(dataInput, callback){
         callback(); //getdata function will get call once we push the new dataInput
    },2000) 
 }
-createData({name: "dhanupriya", role: "software developer"}, getData) //we are passing getData function as a callback
+createData({name: "dhanujyoti", role: "software developer"}, getData) //we are passing getData function as a callback
 ====================================================================
 Promises:
 const data = [ //array of object
-  {name: "priya", role: "software developer"},
+  {name: "jyoti", role: "software developer"},
   {name: "riya", role: "software developer"},
-  {name: "supriya", role: "software developer"}
+  {name: "sujyoti", role: "software developer"}
 ];
 
 function getData(){
@@ -2738,7 +2738,7 @@ function getData(){
     output +=`<li> ${item.name}</li>`
    })    
    document.body.innerHTML = output;
- }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanupriya".
+ }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanujyoti".
 }
 function createData(dataInput){
 return new Promise((resolve, reject)=>{
@@ -2751,15 +2751,15 @@ return new Promise((resolve, reject)=>{
 })
    
 }
-createData({name: "dhanupriya", role: "software developer"})
+createData({name: "dhanujyoti", role: "software developer"})
 .then(getData)
 .catch(err => console.log("Errors !"))
 ====================================================================
 Async/Await:
 const data = [ //array of object
-  {name: "priya", role: "software developer"},
+  {name: "jyoti", role: "software developer"},
   {name: "riya", role: "software developer"},
-  {name: "supriya", role: "software developer"}
+  {name: "sujyoti", role: "software developer"}
 ];
 
 function getData(){
@@ -2769,7 +2769,7 @@ function getData(){
     output +=`<li> ${item.name}</li>`
    })    
    document.body.innerHTML = output;
- }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanupriya".
+ }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanujyoti".
 }
 function createData(dataInput){
 return new Promise((resolve, reject)=>{
@@ -2783,7 +2783,7 @@ return new Promise((resolve, reject)=>{
 }
 
 async function start(){ //using sync and await
-await createData({name: "dhanupriya", role: "software developer"});
+await createData({name: "dhanujyoti", role: "software developer"});
 getData();
 }
 start();
@@ -2813,7 +2813,7 @@ console.log(store(5))
 =========================================================================
 Call, apply and bind:
 var userDetails ={
-  name: "Priya",
+  name: "jyoti",
   age: 100,
   role: "Software Developer",
   printDetail : function(){
@@ -2831,7 +2831,7 @@ var userDetails2 ={
 userDetails.printDetail.call(userDetails2); //if i want line 6th "this" should point to userDetails2 then use call function.
 -----------------------------------------------------------------------------------
 var userDetails ={
-  name: "Priya",
+  name: "jyoti",
   age: 100,
   role: "Software Developer"
 }
@@ -2848,7 +2848,7 @@ var userDetails2 ={
 printDetail.call(userDetails2); 
 --------------------------------------------------------------------------------
 var userDetails ={
-  name: "Priya",
+  name: "jyoti",
   age: 100,
   role: "Software Developer"
 }
@@ -2933,7 +2933,7 @@ console.log(updated)
 ProtoType: If we can inherit the property of the one class to other class called as Inheritence. 
 
 const objName = {
- name : "priya",
+ name : "jyoti",
  getName : function(){
    return this.name; //wanted to access above name inside block so we used "this"
  }
@@ -2948,7 +2948,7 @@ const objState = {
 console.log("2",objState.getName()); //if will find in current object, if not available then it move to upper object continuously. If still not found then it will give undefined.
 
 const objCountry = {
-  name: "supriya",
+  name: "sujyoti",
   country : "india",
   __proto__ : objState
 }
@@ -2963,14 +2963,14 @@ Array.prototype.convertToObject = function(){
   )
   return newObj;
 }
-const arr =["priya"];
+const arr =["jyoti"];
 console.log(arr.convertToObject()); //array to object conversion with prototype
 ------------------------------------------------------------------
 function myProtoType(name){
  return this.name=name;
 }
 myProtoType.prototype=objName;
-const myproto = myProtoType("priya")
+const myproto = myProtoType("jyoti")
 console.log(myproto);
 console.log(myproto.getName());
 ==========================================================================================================================================================================
@@ -2981,13 +2981,13 @@ obj.add(4)
 obj.delete(3)
 console.log(obj)
 
-var obj1={name:"priya"}
+var obj1={name:"jyoti"}
 obj.add(obj1)
 console.log(obj)
 ======================================================================================================================================================================
 Map: store in key value pair. Can iterate.
-let myMap = new Map([["a1", "priya"],["a2","riya"]])
-myMap.set("a2","supriya")
+let myMap = new Map([["a1", "jyoti"],["a2","riya"]])
+myMap.set("a2","sujyoti")
 console.log(myMap.get("a2"))// will get last value which we will assign
 for(let [key,value] of myMap){
   console.log(`keys ${key}, value ${value}`)
@@ -2995,7 +2995,7 @@ for(let [key,value] of myMap){
 =======================================================================================================================================================================
 WeakSet: only store object, can't iterate with for/foreach
 let ws = new WeakSet()
-const obj={"name":"priya"}
+const obj={"name":"jyoti"}
 ws.add(obj)
 console.log(ws.has(obj));
 WeakMap: It's similar to WeakSet where can't able to iterate and only stores an object
@@ -3194,9 +3194,9 @@ checkSort(-44);
 
 //output: [-44,2,4,5]
 ==================================================================================================================================================================
-[..."priya"]
+[..."jyoti"]
 // ['p', 'r', 'i', 'y', 'a']
-"priya".split('')
+"jyoti".split('')
 // ['p', 'r', 'i', 'y', 'a']
 ===================================================================================================================================================================
 Deep Copy and Shallow Copy:
@@ -3380,7 +3380,7 @@ function areAnagram(str1, str2)
 
 // Driver code
 let str1 =
-"priya".split("");
+"jyoti".split("");
 let str2 =
 "riyap".split("");
 
@@ -3457,7 +3457,7 @@ function debounce(func, a){
   }
 }
 const printName = () => {
-  console.log("Priya"); 
+  console.log("jyoti"); 
 }
 
 debounce(printName(), 8000)()
@@ -3697,7 +3697,7 @@ convertToORBasedExpression(inputArray)
    - Answer: It binds the `printName` function to the `name` object, setting the `this` value, and pre-filling the parameters with "Mumbai" and "MH".
 
 7. Describe the output of `printMyName("India")` in the code.
-   - Answer: The output will be "Priya Bagde MH India" because the `printMyName` function is bound to the `name` object with additional parameters.
+   - Answer: The output will be "jyoti Bagde MH India" because the `printMyName` function is bound to the `name` object with additional parameters.
 
 8. What is a polyfill in JavaScript?
    - Answer: A polyfill is a piece of code that provides functionality that is not natively supported by a web browser.
@@ -3789,10 +3789,10 @@ convertToORBasedExpression(inputArray)
 37. What is the impact of the polyfill on the prototype chain of functions?
     - Answer: The polyfill does not affect the prototype chain of functions.
 	
-Part 1: https://www.linkedin.com/posts/priya-bagde_part1-frontend-javascript-activity-7153331959824330753-8oUH?utm_source=share&utm_medium=member_desktop
-Part 2: https://www.linkedin.com/posts/priya-bagde_part2-frontend-javascript-activity-7153332995796434945-uPvW?utm_source=share&utm_medium=member_desktop
-Part 3: https://www.linkedin.com/posts/priya-bagde_part3-frontend-javascript-activity-7153333414849347584-rIBl?utm_source=share&utm_medium=member_desktop
-Part 4: https://www.linkedin.com/posts/priya-bagde_part4-frontend-javascript-activity-7153333978718973953-db63?utm_source=share&utm_medium=member_desktop
+Part 1: https://www.linkedin.com/posts/jyoti-bagde_part1-frontend-javascript-activity-7153331959824330753-8oUH?utm_source=share&utm_medium=member_desktop
+Part 2: https://www.linkedin.com/posts/jyoti-bagde_part2-frontend-javascript-activity-7153332995796434945-uPvW?utm_source=share&utm_medium=member_desktop
+Part 3: https://www.linkedin.com/posts/jyoti-bagde_part3-frontend-javascript-activity-7153333414849347584-rIBl?utm_source=share&utm_medium=member_desktop
+Part 4: https://www.linkedin.com/posts/jyoti-bagde_part4-frontend-javascript-activity-7153333978718973953-db63?utm_source=share&utm_medium=member_desktop
 ====================================================================================================================================
 "What's the differences between Promise.any, Promise.race, Promise.all, and Promise.allSettled with real-time examples."
 
