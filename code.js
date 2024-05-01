@@ -3789,10 +3789,7 @@ convertToORBasedExpression(inputArray)
 37. What is the impact of the polyfill on the prototype chain of functions?
     - Answer: The polyfill does not affect the prototype chain of functions.
 	
-Part 1: https://www.linkedin.com/posts/jyoti-bagde_part1-frontend-javascript-activity-7153331959824330753-8oUH?utm_source=share&utm_medium=member_desktop
-Part 2: https://www.linkedin.com/posts/jyoti-bagde_part2-frontend-javascript-activity-7153332995796434945-uPvW?utm_source=share&utm_medium=member_desktop
-Part 3: https://www.linkedin.com/posts/jyoti-bagde_part3-frontend-javascript-activity-7153333414849347584-rIBl?utm_source=share&utm_medium=member_desktop
-Part 4: https://www.linkedin.com/posts/jyoti-bagde_part4-frontend-javascript-activity-7153333978718973953-db63?utm_source=share&utm_medium=member_desktop
+
 ====================================================================================================================================
 "What's the differences between Promise.any, Promise.race, Promise.all, and Promise.allSettled with real-time examples."
 
@@ -3802,9 +3799,9 @@ Part 4: https://www.linkedin.com/posts/jyoti-bagde_part4-frontend-javascript-act
 🤝 𝐏𝐫𝐨𝐦𝐢𝐬𝐞.𝐚𝐥𝐥 𝐰𝐡𝐞𝐧 𝐚𝐥𝐥 𝐩𝐫𝐨𝐦𝐢𝐬𝐞𝐬 𝐦𝐮𝐬𝐭 𝐬𝐮𝐜𝐜𝐞𝐞𝐝, 𝐚𝐧𝐝 
 🤝 𝐏𝐫𝐨𝐦𝐢𝐬𝐞.𝐚𝐥𝐥𝐒𝐞𝐭𝐭𝐥𝐞𝐝 𝐰𝐡𝐞𝐧 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐜𝐚𝐩𝐭𝐮𝐫𝐞 𝐭𝐡𝐞 𝐨𝐮𝐭𝐜𝐨𝐦𝐞 𝐨𝐟 𝐚𝐥𝐥 𝐩𝐫𝐨𝐦𝐢𝐬𝐞𝐬, 𝐫𝐞𝐠𝐚𝐫𝐝𝐥𝐞𝐬𝐬 𝐨𝐟 𝐬𝐮𝐜𝐜𝐞𝐬𝐬 𝐨𝐫 𝐟𝐚𝐢𝐥𝐮𝐫𝐞.
  
-Taking a moment to collect my thoughts, I explained, 
 
-"Absolutely, let's dive into the Promise methods. Firstly, Promise.any resolves as soon as any of the promises it receives resolves, rejecting only if all promises are rejected. This is particularly handy when dealing with multiple APIs, and we want to proceed as soon as we get the first successful response. 
+
+"Let's dive into the Promise methods. Firstly, Promise.any resolves as soon as any of the promises it receives resolves, rejecting only if all promises are rejected. This is particularly handy when dealing with multiple APIs, and we want to proceed as soon as we get the first successful response. 
 
 On the other hand, Promise.race resolves or rejects as soon as any of the promises resolves or rejects. This is useful when speed is crucial, like when fetching data from multiple sources and taking the result from the fastest one.
 
@@ -3816,7 +3813,7 @@ Memoisation:
 
 Write a memoization for computing the Fibonacci series".
 
-Taking a moment to collect my thoughts, I explained the below points, but did i missed any other point here. 
+
 
 ✍ Memoization is a performance optimization technique where the results of expensive function calls are 𝐜𝐚𝐜𝐡𝐞𝐝 𝐚𝐧𝐝 𝐫𝐞𝐮𝐬𝐞𝐝 when the same inputs occur again. 
 ✍ This helps to avoid 𝐫𝐞𝐝𝐮𝐧𝐝𝐚𝐧𝐭 𝐜𝐨𝐦𝐩𝐮𝐭𝐚𝐭𝐢𝐨𝐧𝐬, improving the overall efficiency of the program. 
